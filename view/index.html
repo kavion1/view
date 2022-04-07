@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奥运奖牌数据平台</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.0.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.myscroll').myScroll({
+                speed: 60, //数值越大，速度越慢
+                rowHeight: 38 //li的高度
+            });
+        })
+
+    </script>
+</head>
+<body>
+<!--头部-->
+<header id="header">
+    <div class="header">
+        <h1 class="">中国奥运奖牌数据平台</h1>
+    </div>
+</header>
+
+<!--内容-->
+<section id="data_content">
+
+    <div class="data_info">
+        <div class="info_1 fl">
+            <div class="text_1">
+                <div class="fl">
+                    <img src="images/info_1.png" alt="">
+                    <div class="fl count">
+                        <p style="color: gold;">中国金牌总数</p>
+                        <p class="conuts">265 枚</p>
+                        
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="images/info_2.png" >
+                    <div class="fl count">
+                        <p style="color: silver;">中国银牌总数</p>
+                        <p class="conuts">194 枚</p>
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="images/info_3.png" alt="">
+                    <div class="fl count">
+                        <p style="color: #a9631d">中国铜牌总数</p>
+                        <p class="conuts">173 枚</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info_2 fl">
+            <div class="text_2">
+                <div class="fl">
+                    <img src="images/info_4.png" alt="">
+                    <div class="fl count">
+                        <p >中国历届奖牌数累计</p>
+                        <p class="conuts">632 枚</p>
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="images/info_5.png" alt="">
+                    <div class="fl count">
+                        <p>中国历届奖牌累计总排名</p>
+                        <p class="conuts">第7名</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="info_3 fr">
+            <div class="text_2">
+                <div class="fl">
+                    <img src="images/info_6.png" alt="">
+                    <div class="fl count">
+                        <p><a href="https://baike.baidu.com/item/%E7%8E%B0%E4%BB%A3%E5%A5%A5%E8%BF%90%E4%BC%9A%E5%8E%86%E5%8F%B2/2967463" style="font-size: 25px;">奥运历史</a></p>
+                        <!-- <p class="conuts">46625</p> -->
+                    </div>
+                </div>
+                <div class="fl" style="margin-left: -40px;">
+                    <img src="images/info_7.png" alt="">
+                    <div class="fl count">
+                        <p><a href="#" style="font-size: 20px;line-height: 25px;">第三十三届奖牌预测</a></p>
+                        <!-- <p class="conuts">46625</p> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="data_content">
+        <!--左边-->
+        <div class="data_left fl">
+            <div class="left_top">
+                <!--/*左边第一部分*/-->
+                <div class="info public">
+                    <div class="min-title">
+                        <span>奖牌累计前五的运动项目柱状图</span>
+                    </div>
+                    <div id="char4" style="width:100%;height: 100%;"></div>
+                    <div class="boxfoot"></div>
+                </div>
+                <!--左边第二部分-->
+                <div class="top_bottom public">
+                    <div class="min-title">
+                        <span>奖牌累计前五的运动项目饼图</span>
+                    </div>
+                    <div id="echarts_1" style="width:100%;height: 100%;"></div>
+                    <div class="boxfoot"></div>
+                </div>
+                <!--左边第三部分-->
+                <div class="left_bottom public">
+                    <div class="min-title">
+                        <span>前五金银铜获奖情况</span>
+                    </div>
+                    <div id="chart_2" style="width:100%;height: 100%;"></div>
+                    <div class="boxfoot"></div>
+                </div>
+            </div>
+        </div>
+        <!--中间-->
+        <div class="data_c fl">
+            <div class="data_c_1">
+
+
+                <div id="contPar" class="contPar">
+                    <div id="page1"  style="z-index:1">
+                        <div class="title0"></div>
+                        <div class="title1"></div>
+
+
+                        <div id="drag-container" style="z-index: 1">
+                            <div id="spin-container">
+
+                                <img alt="" class="infoBtn" src="picture/page1_5.png">
+                                <img alt="" class="" src="picture/page1_1.png">
+                                <img alt="" class="" src="picture/page1_2.png">
+                                <img alt="" class="" src="picture/page1_6.png">
+                                <img alt="" class="" src="picture/page1_4.png">
+
+                            </div>
+                            <div id="ground"></div>
+                        </div>
+
+                        <img alt="" class="img3 png" src="images/newdz.png"  >
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="data_c_2 public">
+                <div class="min-title">
+                    <span>历届奥运会中国金银铜奖牌数及金牌占比</span>
+                </div>
+                <div id="echart4" style="width: 100%;height: 100%;padding-top: 10px;"></div>
+                <div class="boxfoot"></div>
+            </div>
+        </div>
+        <!--右边-->
+        <div class="data_right fr">
+            <div class="right_top">
+                <!--/*右边第一部分*/-->
+                <div class="right_info public">
+                    <div class="min-title">
+                        <span>各项目首次获奖人</span></span>
+                    </div>
+                    <div class="echart wenzi">
+                        <div class="gun">
+                            <span>获奖人</span>
+                            <span>项目</span>
+                            <span>获奖时间</span>
+                        </div>
+                        <div id="FontScroll" class="myscroll">
+                            <ul>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >许海峰  </span>
+                                        <span>射击 </span>
+                                        <span>1984年 第23届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >陈龙灿...</span>
+                                        <span>乒乓球 男双</span>
+                                        <span> 1984年  23届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >陈静</span>
+                                        <span>乒乓球..</span>
+                                        <span>1984年 23届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span > 周继红</span>
+                                        <span>跳水..</span>
+                                        <span>1984年 23届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >李宁</span>
+                                        <span>体操(自由体操..</span>
+                                        <span>1984年 23届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >中国女子排..</span>
+                                        <span>排球</span>
+                                        <span>1984年 23届</span>
+                                    </div>
+                                </li><li>
+                                <div class="fontInner clearfix">
+                                    <span >曾国强</span>
+                                    <span>举重  </span>
+                                    <span>1984年 23届</span>
+                                </div>
+                            </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >杨文意</span>
+                                        <span>游泳(50米..</span>
+                                        <span>1992年 25届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >庄晓岩</span>
+                                        <span>柔道  </span>
+                                        <span>1992年 25届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >陈跃铃</span>
+                                        <span>田径(女子..</span>
+                                        <span>1992年 25届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >葛菲、顾俊</span>
+                                        <span>羽毛球..</span>
+                                        <span>1996年 26届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >陈中</span>
+                                        <span>跆拳道</span>
+                                        <span> 2000年 27届 </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >王旭</span>
+                                        <span>摔跤 </span>
+                                        <span>2004年 28届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span >冼东妹</span>
+                                        <span>柔道</span>
+                                        <span> 2004年 28届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span > 栾菊杰</span>
+                                        <span>击剑（女子..</span>
+                                        <span>1984年 23届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span > 李婷、孙甜甜</span>
+                                        <span>网球（女双）</span>
+                                        <span>2004年 28届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span > 孟关良、杨..</span>
+                                        <span>皮划艇..</span>
+                                        <span>2004年 28届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>张娟娟</span>
+                                        <span>射箭 </span>
+                                        <span>2008年 29届</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span > 邹市明</span>
+                                        <span>拳击..</span>
+                                        <span> 2008年 29届 </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span > 宫金杰 钟天.</span>
+                                        <span>场地自行车..</span>
+                                        <span>2016 30届</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="boxfoot"></div>
+                </div>
+                <!--右边第二部分-->
+                <div class="right_content public">
+                    <div class="min-title">
+                        <span>Top10省份获奖总数</span>
+                    </div>
+                    <div id="chart_3" style="width:100%;height: 100%;"></div>
+                    <div class="boxfoot"></div>
+                </div>
+               
+        </div>
+
+
+
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/echart.js"></script>
+<!--<script type="text/javascript" src="js/com.js"></script>-->
+<script src="js/index.js"></script>
+<script src="js/fontscroll.js"></script>
+
+
+</body>
+</html>
